@@ -2,9 +2,6 @@
 #include <stdlib.h>
 
 #include <editline/readline.h>
-#include <editline/history.h>
-
-static char input[2048];
 
 int main(int argc, char** argv){
 
@@ -19,7 +16,7 @@ int main(int argc, char** argv){
     add_history(input);
 
     /* echo input */
-    printf("No you're a %s", input);
+    printf("No you're a %s\n", input);
 
     /* free retrieved input */
     free(input);
