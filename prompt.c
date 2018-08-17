@@ -8,14 +8,17 @@ int main(int argc, char** argv){
   puts("Press Ctrl+c to Exit\n");
 
   while(1){
-    /* output prompt */
-    fputs("lispy> ", stdout);
+    /* output prompt and get input*/
+    char* input = readline("lispy> ");
 
-    /* read a line of user input max size 2048 */
-    fgets(input, 2048, stdin);
+    /* add input to history */
+    add_history(input);
 
     /* echo input */
     printf("No you're a %s", input);
+
+    /* free retrieved input */
+    free(input);
   }
 
   return 0;
