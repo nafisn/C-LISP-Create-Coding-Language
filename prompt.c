@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     char* input = readline("Sunny> ");
     add_history(input);
 
-    printf("What is %s ?\n", input);
+    printf("No %s.\n", input);
     free(input);
 
   }
